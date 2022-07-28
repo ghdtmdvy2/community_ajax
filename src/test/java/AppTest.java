@@ -13,9 +13,9 @@ public class AppTest {
         assertThat(rs).isEqualTo(30);
     }
     @Test
-    void 실험_json() throws JsonProcessingException {
+    void 실험_객체에서_json() throws JsonProcessingException {
         ArticleDto articleDto = new ArticleDto(1, "제목1","내용1");
-        String rs = Ut.json.toJsonStr(articleDto,"");
+        String rs = Ut.json.toStr(articleDto,"");
         assertThat(rs).isNotBlank();
         assertThat(rs).isEqualTo("""
                 {"id":1,"title":"제목1","body":"내용1"}
